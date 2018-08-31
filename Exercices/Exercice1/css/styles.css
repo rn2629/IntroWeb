@@ -1,4 +1,20 @@
 /* Style Unique pour tout le site*/
 body {
-    background: center no-repeat; url("../images/fond.jpg");
+    color: azure;
+    background: center no-repeat url("../images/fond.jpg");
+}
+h1 {
+     color:gray;
+    text-align: center;
+    border: 1px solid white;
+}
+h2 {
+    color: brown;
+
+}
+ol{
+    color: red;
+}
+ul{
+    color: orangered;
 }
