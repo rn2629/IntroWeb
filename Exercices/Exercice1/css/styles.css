@@ -22,3 +22,8 @@ ol{
 ul{
     color: orangered;
 }
+/*identifiant*/
+#trailer {
+    text-transform: uppercase;
+    color:dodgerblue;
+}
