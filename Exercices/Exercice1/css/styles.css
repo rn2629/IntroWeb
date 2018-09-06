@@ -1,6 +1,6 @@
 /* Style Unique pour tout le site*/
 body {
-
+    font-family:"Arial Narrow";
     color: azure;
     background: center no-repeat url("../images/fond.jpg");
 }
