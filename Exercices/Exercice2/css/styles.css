@@ -1,0 +1,55 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    font: 1.0em Arial, Helvetica, sans-serif;
+
+
+}
+h1{
+    text-align: center;
+    border: 5px solid olivedrab;
+}
+img{
+    width: 135px;
+    height:140px;
+
+
+}
+#box {
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    width: 150px;
+    height: 150px;
+    float: left;
+    text-align: center;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+
+}
+#box2 {
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    width: 150px;
+    height: 150px;
+    float: right;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 1px;
+    padding: 10px;
+
+
+}
+
+
+
+/*classe*/
+
+.left{
+    text-align: left;
+}
+
+.Aligner{
+    text-align: right;
+}
