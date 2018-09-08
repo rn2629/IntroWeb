@@ -8,6 +8,7 @@ h1{
     border: 5px solid olivedrab;
 }
 .box {
+    width: 20%;
 
 	border: 2px solid darkblue;
 	padding-left: 10px;
