@@ -9,12 +9,16 @@ h1{
 }
 .box {
     width: 20%;
-
 	border: 2px solid darkblue;
-	padding-left: 10px;
+    padding-left: 12px;
+    float: left;
 }
 .box2 {
   border: 2px solid red;
+    padding-left: 2%;
+    width: 76%;
+    float: right;
+
 }
 
 
