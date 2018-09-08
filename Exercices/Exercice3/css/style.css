@@ -12,6 +12,7 @@ h1{
 	border: 2px solid darkblue;
     padding-left: 12px;
     float: left;
+
 }
 .box2 {
   border: 2px solid red;
@@ -19,6 +20,9 @@ h1{
     width: 76%;
     float: right;
 
+}
+.border{
+    margin-top: 5px;
 }
 
 
