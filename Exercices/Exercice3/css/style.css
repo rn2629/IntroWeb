@@ -18,7 +18,7 @@ h1{
   border: 2px solid red;
     padding-left: 2%;
     width: 76%;
-    float: right;
+    float: left;
 
 }
 .box3 {
@@ -26,20 +26,19 @@ h1{
     border: 5px red;
 
 }
-.border{
-    margin-top: 5px;
-}
-.border2{
-  margin: 2px;
-    margin-right: 10px;
 
-}
 
 img {
-    padding-left: 2%;
-    width: 30%;
-    float: right;
-
+    width: 41%;
+    height: 20%;
+    float: left;
+    border: 2px solid black;
+    text-align: center;
 }
+
+.p{
+    float: left;
+}
+
 
 
