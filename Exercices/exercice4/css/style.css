@@ -22,11 +22,13 @@ nav{
 	float: left;
 	width: 38%;
 	text-align: center;
+	padding-top: 2px;
 }
 
 #section2{
 	padding-top: 2px;
 	text-align: center;
+	padding-right: 119px;
 }
 footer{
 	padding-right: 600px;
