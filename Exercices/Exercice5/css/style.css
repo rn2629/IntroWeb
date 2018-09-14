@@ -15,7 +15,7 @@ nav
 }
 section
 {
-	margin-left: 8%;
+	margin-left: 6%;
 	float: left;
 	border : 1px solid blue ;
 	width: 55%;
@@ -34,5 +34,17 @@ footer{
 }
 
 
+#postion\ 1{
+	float: left;
+	width: 38%;
+	text-align: center;
+}
 
-
+#position\ 2{
+	border : 1px solid blue ;
+	width: 30%;
+	margin-left: 3%;
+}
+.position3{
+	text-align: left;
+}
