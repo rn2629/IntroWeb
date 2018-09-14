@@ -15,7 +15,7 @@ nav
 }
 section
 {
-	margin-left: 40px;
+	margin-left: 8%;
 	float: left;
 	border : 1px solid blue ;
 	width: 55%;
@@ -30,7 +30,7 @@ aside{
 footer{
 	float: left;
 	text-align: center;
-	margin-left: 28%;
+	margin-left: 32%;
 }
 
 
