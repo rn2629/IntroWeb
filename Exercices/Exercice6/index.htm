@@ -18,19 +18,19 @@
 		<form action="index.htm" method="post">
 		<div>
 			<label for="Nom">Nom*</label>
-			<label><input type="text" name="nom" size="30"></label>
+			<label><input type="text" name="nom" size="50"></label>
 		</div>
 		<div>
 			<label for="Prenom">Prenom*</label>
-			<label><input type="text" name="prenom" size="30"></label>
+			<label><input type="text" name="prenom" size="50"></label>
 		</div>
 		<div>
 			<label for="Adresse">Adresse</label>
-			<label><input type="text" name="sdresse" placeholder=" 999 rue" size="30"></label>
+			<label><input type="text" name="sdresse" placeholder=" 999 rue" size="50"></label>
 		</div>
 		<div>
 			<label for="Ville">Ville</label>
-			<label><input type="text" name="ville" size="30"></label>
+			<label><input type="text" name="ville" size="50"></label>
 		</div>
 		<div>
 			<label for="Telephone">Telephone*</label>
@@ -53,13 +53,12 @@
 		</div>
 			<div>
 				<label for="Choix">Choix</label>
-				<label><input type="text" list="etats" name="etat"></label>
-				<datalist id="etats">
+				<label><select name="etats">
 					<option value="American Express">American Express</option>
 					<option value="Mastercard">Mastercard</option>
 					<option value="Visa">Visa</option>
 					<option value="Interact">Interac</option>
-				</datalist>
+				</select></label>
 			</div>
 			<div>
 				<label for="Carte de credit">Carte de credit*</label>
@@ -67,11 +66,11 @@
 			</div>
 			<div>
 				<label for="Mot de passe">Mot de passe*</label>
-				<label><input type="password" name="password" size="30"></label>
+				<label><input type="password" name="password" size="50"></label>
 			</div>
 			<div>
 				<label for="Courriel">courriel</label>
-				<input type="email" name="email" placeholder="aaaaaa@aaaaaa.aaa" size="30">
+				<input type="email" name="email" placeholder="aaaaaa@aaaaaa.aaa" size="50">
 			</div>
 			<div>
 				<label for="Envoyer"></label>
