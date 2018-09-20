@@ -11,9 +11,73 @@
 	<link rel="stylesheet " href ="CSS/Style.css"/>
 </head>
 <body>
-	<div class="form-style">
+
+	<div class="form-style"></div>
 		<div class="Entete">Entrez les informations du membre</div>
 		<!-- formulaire ici -->
-	</div>
+		<form action="index.htm" method="post">
+		<div>
+			<label for="Nom">Nom*</label>
+			<label><input type="text" name="nom" size="30"></label>
+		</div>
+		<div>
+			<label for="Prenom">Prenom*</label>
+			<label><input type="text" name="prenom" size="30"></label>
+		</div>
+		<div>
+			<label for="Adresse">Adresse</label>
+			<label><input type="text" name="sdresse" placeholder=" 999 rue" size="30"></label>
+		</div>
+		<div>
+			<label for="Ville">Ville</label>
+			<label><input type="text" name="ville" size="30"></label>
+		</div>
+		<div>
+			<label for="Telephone">Telephone*</label>
+			<input type="tel" name="telephone" placeholder=" 999 999-9999">
+		</div>
+		<div>
+			<label for="Date d'inscription">Date d'inscription*</label>
+			<input type="date" name="dateI" placeholder=" jj/mm/aaaa">
+		</div>
+		<div>
+			<label for="Date de fin">Date de fin</label>
+			<input type="date" name="dateF" placeholder=" aaaa - mm - jj ">
+		</div>
+		<div>
+			<label for="Sexe">Sexe</label>
+				<input id="M" type="radio" name="radGenre" value="Masculin" checked>
+				<label class="m1" for="M">Masculin</label>
+				<input id="F" type="radio" name="radGenre" value="Feminin" checked>
+				<label class="m1" for="F">Feminin</label>
+		</div>
+			<div>
+				<label for="Choix">Choix</label>
+				<label><input type="text" list="etats" name="etat"></label>
+				<datalist id="etats">
+					<option value="American Express">American Express</option>
+					<option value="Mastercard">Mastercard</option>
+					<option value="Visa">Visa</option>
+					<option value="Interact">Interac</option>
+				</datalist>
+			</div>
+			<div>
+				<label for="Carte de credit">Carte de credit*</label>
+				<input type="number" name="number" placeholder="9999 9999 9999 9999">
+			</div>
+			<div>
+				<label for="Mot de passe">Mot de passe*</label>
+				<label><input type="password" name="password" size="30"></label>
+			</div>
+			<div>
+				<label for="Courriel">courriel</label>
+				<input type="email" name="email" placeholder="aaaaaa@aaaaaa.aaa" size="30">
+			</div>
+			<div>
+				<label for="Envoyer"></label>
+				<input type="submit" value="Envoyer"><input type="reset" value="Reinitialiser">
+			</div>
+
+  </form>
 </body>
 </html>
