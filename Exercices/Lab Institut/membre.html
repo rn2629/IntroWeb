@@ -39,24 +39,45 @@
 			<ul><li><a href="#" target="_blank">Accueil</a></li><li><a href="#" target="_blank">| Formation</a></li><li><a href="#" target="_blank">| Membres</a></li><li><a href="#" target="_blank">| Services</a></li></ul>
 			</nav>
 			<!--fin Nav-->
-			<h1>Institut des sciences de la mer de Rimousky</h1>
+			<h1>Entrez les informations du membre</h1>
+			<!--formulaire ici-->
+			<form action="membre.html" method="post">
+				<div>
+					<label for="Nom">Nom<span>*</span></label>
+					<label><input type="text" name="nom" size="50"></label>
+				</div>
+				<div>
+					<label for="Prenom">Prenom<span>*</span></label>
+					<label><input type="text" name="prenom" size="50"></label>
+				</div>
+				<div>
+					<label for="Adresse Courriel">Adresse Courriel</label>
+					<label><input type="email" name="email" size="50"></label>
+				</div>
+				<div>
+					<label for="Telephone">Telephone<span>*</span></label>
+					<label><input type="tel" name="prenom" placeholder="(418) 917-1684" size="20"></label>
+				</div>
+				<div>
+					<label for="Commentaires">Commentaires</label>
+
+					<textarea></textarea>
+				</div>
+				<div>
+					<label for="Categorie">Categorie</label>
+					<label><select name="professions">
+						<option value="Étudiant">Étudiant</option>
+						<option value="Adulte">Adulte</option>
+						<option value="Retraité">Retraité</option>
+					</select></label>
+				</div>
+				<div id="pos">
+					<input type="submit" value="Envoyer" style="width:250px"> <input type="reset" value="Reinitialiser" style="width: 250px">
+				</div>
+
+			</form>
 			<!--coordonnées-->
-			<p>
-			C.P. 221<br>
-			Baie-Comeau (Québec)<br>
-			G5C2S9<br>
-			</p>
-			<!--téléphone et courriel-->
-			<p>
-			<b>Téléphone:</b>(418)724-1650<br>
-			<b>Télécopie:</b>(418)724-1846<br>
-			<b>Tél.sans frais:</b>1 800 511-3382<br>
-			<a href="mailto:institutsciencerimousky@globetrotter.net">institutsciencerimousky@globetrotter.net</a>
-			</p>
-			<p>
-			<!--heure d'ouverture-->
-			<b>Heures d'ouverture:</b>8 h 30 à 16 h 30 du lundi au vendredi.	
-			</p>
+
 			<!--ligne de séparation-->
 			<hr>
 
@@ -68,9 +89,9 @@
 		<footer>
 			<ul><li><a href="index.html" target="_blank">Accueil</a></li><li><a href="#" target="_blank">| Formation</a></li><li><a href="#" target="_blank">| Membres</a></li><li><a href="#" target="_blank">| Services</a></li></ul>
 
-			<p>&copy 2018 <b>Institut des sciences de la mer de Rimousky</b> Tous droits réservés.</p>
+			<p>&copy 2018 <b>Institut des sciences de la mer de Rimousky.</b> Tous droits réservés.</p> 
 			<p>Ce site est optimisé pour 1200x1080px</p>
-		</br>
+
 		</footer>
 		<!--fin footer-->
 	</main>
