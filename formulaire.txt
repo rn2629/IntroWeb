@@ -1,0 +1,49 @@
+<tr>
+				   <th>Nom</th>
+				   <td><input type="text" value=""></td>
+		        </tr>
+			    <tr>
+					<th>Prenom</th>
+				    <td><input type="text" value=""></td>
+				</tr>
+			    <tr>
+				    <th>Adresse</th>
+				    <td><input type="text" value=""></td>
+			    </tr>
+				<tr>
+					<th>Ville</th>
+					<td><input type="text" value=""></td>
+				</tr>
+				<tr>
+					<th>Telephone</th>
+					<td><input type="tel" value=""></td>
+				</tr>
+				<tr>
+					<th>Date d'inscription</th>
+					<td><input type="date" value=""></td>
+				</tr>
+				<tr>
+					<th>Date de fin</th>
+					<td><input type="date" name="naissance"></td>
+				</tr>
+			<tr>
+				<th>Sexe</th>
+				<td><p>
+					<input id="M" type="radio" name="radGenre" value="Masculin" checked>
+					<label for="M">Masculin</label>
+					<input id="F" type="radio" name="radGenre" value="Feminin" checked>
+					<label for="F">Feminin</label>
+
+				</td></p>
+			<tr>
+				<th>Choix</th>
+				<input type="text" list="cards" name="etat">
+				<datalist id="etats">
+					<option value="American Express">American Express</option>
+					<option value="Mastercard">Mastercard</option>
+					<option value="Visa">Visa</option>
+					<option value="Interact">Interac</option>
+				</datalist> 
+			</tr>
+			</tr>
+			</tr>
