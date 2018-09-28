@@ -47,3 +47,41 @@
 			</tr>
 			</tr>
 			</tr>
+
+
+
+			<div>
+					<label for="Nom">Nom<span>*</span></label>
+					<label><input type="text" name="nom" size="50"></label>
+				</div>
+				<div>
+					<label for="Prenom">Prenom<span>*</span></label>
+					<label><input type="text" name="prenom" size="50"></label>
+				</div>
+				<div>
+					<label for="Adresse Courriel">Adresse Courriel</label>
+					<label><input type="email" name="email" size="50"></label>
+				</div>
+				<div>
+					<label for="Telephone">Telephone<span>*</span></label>
+					<label><input type="tel" name="prenom" placeholder="(418) 917-1684" size="20"></label>
+				</div>
+				<div>
+
+					<label for="Commentaires">Commentaires</label>
+					<textarea placeholder="Ecrivez vos commentaires ici"></textarea>
+
+				</div>
+				<div>
+					<label for="Categorie">Categorie</label>
+					<label><select name="professions">
+						<option value="Étudiant">Étudiant</option>
+						<option value="Adulte">Adulte</option>
+						<option value="Retraité">Retraité</option>
+					</select></label>
+				</div>
+				<div id="pos">
+					<input class="pos1" type="submit" value="Envoyer" style="width: 250px"> <input class="pos1" la type="reset" value="Reinitialiser" style="width: 250px">
+				</div>
+
+			</form>
