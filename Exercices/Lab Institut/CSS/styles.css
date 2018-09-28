@@ -107,11 +107,13 @@ label{
     margin-left: 45px;
     display: inline-block;
     width: 18%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+	vertical-align: top;
 
 }
 textarea{
     margin-left: 43px;
+	margin-bottom: 15px;
 }
 span{
     color: red;
