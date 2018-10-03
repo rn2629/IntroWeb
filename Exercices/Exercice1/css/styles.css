@@ -1,8 +1,24 @@
 /* Style Unique pour tout le site*/
+@media screen and (max-width: 680px){
+    body{
+        background-color: red;
+    }
+
+}
+@media screen and (min-width: 860px) and (max-width: 1280px){
+    body{
+        background-color: aqua;
+    }
+}
+@media screen and (min-width: 1280px) {
+    body{
+        background-color: blue;
+    }
+}
 body {
     font-family: Arial Narrow, Georgia, Serif ;
     color: azure;
-    background: center no-repeat url("../images/fond.jpg");
+   /* background: center no-repeat url("../images/fond.jpg");*/
 }
 h1 {
      color:gray;
