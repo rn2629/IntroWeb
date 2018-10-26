@@ -1,6 +1,6 @@
 function btnCalculer_onclick()
 {
-    var  NbreJours, Tarif, Montant, ServiceToilettage, Veterinaires, Choix;
+    var  NbreJours, Tarif, Montant, ServiceToilettage, Veterinaires, Choix, ServiceToilettage2;
 
 
     Choix = document.getElementById("radChien","radChat").value;
@@ -11,10 +11,12 @@ function btnCalculer_onclick()
     if (document.getElementById("chkServ").checked== true)
     {
         ServiceToilettage=  5;
+        ServiceToilettage2 = "avec Service Toilettage"
     }
     else
     {
         ServiceToilettage = 0;
+        ServiceToilettage2 = "Sans Service Toilettage"
     }
 
 
@@ -26,7 +28,7 @@ function btnCalculer_onclick()
 
     }
     else {
-        Tarif = 16.95 + ServiceToilettage;
+        Tarif = 16.95;
         Veterinaires = "Maxime Simard";
         Choix = "Chat";
     }
@@ -47,6 +49,6 @@ function btnCalculer_onclick()
 
     Montant= ((NbreJours*Tarif)+ ServiceToilettage ) + (((NbreJours*Tarif)+ServiceToilettage)*0.05) + (((NbreJours*Tarif)+ ServiceToilettage)*0.09975);
 
-    console.log(" Le montant sera de: " + Montant + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix );
+    console.log(" Le montant sera de: " + Montant + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix + " " + ServiceToilettage2 );
 
 }
