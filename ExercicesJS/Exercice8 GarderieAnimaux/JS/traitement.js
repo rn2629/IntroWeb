@@ -11,19 +11,19 @@ function btnCalculer_onclick()
     if (document.getElementById("chkServ").checked== true)
     {
         ServiceToilettage=  5;
-        ServiceToilettage2 = "avec Service Toilettage"
+        ServiceToilettage2 = "avec Service de Toilettage"
     }
     else
     {
         ServiceToilettage = 0;
-        ServiceToilettage2 = "Sans Service Toilettage"
+        ServiceToilettage2 = "Sans Service de Toilettage"
     }
 
 
     if (document.getElementById("radChien").checked== true)
     {
         Tarif = 18.50;
-        Veterinaires ="Audrey Bouchard";
+
         Choix = "Chien";
 
     }
@@ -33,18 +33,6 @@ function btnCalculer_onclick()
         Choix = "Chat";
     }
 
-
-
-
-
-   /* if (document.getElementById("chkServ").checked== true)
-    {
-        ServiceToilettage= 5.75;
-    }
-    else
-    {
-        ServiceToilettage = 0;
-    }*/
 
 
     Montant= ((NbreJours*Tarif)+ ServiceToilettage ) + (((NbreJours*Tarif)+ServiceToilettage)*0.05) + (((NbreJours*Tarif)+ ServiceToilettage)*0.09975);

@@ -8,7 +8,7 @@ function btnCalculer_onclick()
     NbBillets = parseInt(document.getElementById("txtNbBillets").value);
     Rabais = parseFloat(document.getElementById("txtRabais").value);
 
-     if( NbBillets > 5)
+     if( NbBillets >= 5)
      {
          Rabais = 0.1;
      }
