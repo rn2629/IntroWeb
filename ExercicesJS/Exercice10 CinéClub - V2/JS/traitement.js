@@ -44,7 +44,8 @@ function btnCalculer_onclick()
         MiSession = 0;
     }
 
-    Montant = (PrixBase-(PrixBase*MiSession)) + ((PrixBase-(PrixBase*MiSession))*0.05) + ((PrixBase-(PrixBase*MiSession))*0.09975);
+    MiSession = PrixBase*MiSession;
+    Montant = (PrixBase-MiSession);
 
     console.log(" Le montant sera de : " + Montant + "$" + " Pour la Representation de  " + Representation + " du film " + Listes + " et spectateurs de " + Age + "ans");
 
