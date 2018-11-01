@@ -38,7 +38,7 @@ function btnCalculer_onclick()
 
    Montant = (PrixBase-(PrixBase*Reduction)) + ((PrixBase-(PrixBase*Reduction))*0.05) + ((PrixBase-(PrixBase*Reduction))*0.09975);
 
-    console.log("Le montant sera de : " + Montant + "Pour" + Representation);
+    console.log(" Le montant sera de : " + Montant + "$" + " Pour le " + Representation);
 
 
 }
