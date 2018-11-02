@@ -23,11 +23,14 @@
 
     <!-- Case à cocher -->
     <p class="Align">Service de toilettage<input type="checkbox" id="chkServ" name="chkServ">  </p>
+    <p class="Align"> Entrer le nombre d'heure de travail du veterinaire  :<input class="champ" id="txtTauxHoraires" name="txtTauxHoraires" value="">  </p>
 
     <!-- Case à cocher -->
     <p class="Align">
-        Chien<input type="radio" name="radChoix" checked=true id="radChien">
-        Chat<input type="radio" name="radChoix" id="radChat">
+        Chien<input type="radio" name="radChoix" checked=true id="radChien" onclick="radChien_onclick()">
+        Chat<input type="radio" name="radChoix" id="radChat" onclick="radChat_onclick()">
+        <img src="img/chien.jpg" id="imgChien-Chat" name="imgChien-Chat" height="200" width="200">
+
     </p>
 
     <!-- label affichage -->
