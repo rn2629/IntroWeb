@@ -1,6 +1,6 @@
 function btnCalculer_onclick()
 {
-    var Nbre1, Nbre2, Nbre3;
+    var Nbre1, Nbre2, Nbre3, Nbre4;
 
     Nbre1 = parseFloat(document.getElementById("txtNbre1").value);
     Nbre2 = parseFloat(document.getElementById("txtNbre2").value);

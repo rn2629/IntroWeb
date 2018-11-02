@@ -1,6 +1,6 @@
 function btnCalculer_onclick()
 {
-    var NumSem, JourSem ;
+    var NumSem ;
 
     NumSem = parseInt(document.getElementById("txtNumSem").value);
 

@@ -4,38 +4,24 @@ function btnCalculer_onclick()
 
     Nbre1 = parseFloat(document.getElementById("txtNbre1").value);
     Nbre2 = parseFloat(document.getElementById("txtNbre2").value);
+
     Operateur = document.getElementById("txtOperateur").value;
-    Resultat1 = Nbre1 + Nbre2;
-    Resultat2 = Nbre1 - Nbre2;
-    Resultat3 = Nbre1 * Nbre2;
-    Resultat4 = Nbre1 / Nbre2;
-
-    if (document.getElementById("txtOperateur").value == "+")
+    switch (Operateur)
     {
-     Resultat = Resultat1;
+        case "+":
+            Resultat =  Nbre1 + Nbre2;
+            break;
+        case "-":
+            Resultat = Nbre1 - Nbre2;
+            break;
+        case "*":
+            Resultat = Nbre1 * Nbre2;
+            break;
+        case  "/":
+            Resultat = Nbre1 / Nbre2;
+            break;
     }
-    else
-    {
-        if(document.getElementById("txtOperateur").value == "-")
-        {
-            Resultat = Resultat2;
-        }
-    else
-        {
-        if (document.getElementById("txtOperateur").value == "*")
-        {
-            Resultat = Resultat3;
-        }
-    else
-        {
-        if (document.getElementById("txtOperateur").value == "/")
-        {
-            Resultat = Resultat4;
-        }
 
-        }
-        }
-    }
 
 
     document.getElementById("lblMessage").innerHTML = "Le resultat est :" + Resultat;
