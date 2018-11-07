@@ -34,19 +34,19 @@ function btnCalculer_onclick()
     }
 
 
-    if (NbreJours <= 1 && 5)
+    if (NbreJours >= 1 && NbreJours <= 5)
     {
         Rabais = 0;
     }
     else
     {
-        if (NbreJours <= 5 && 10)
+        if (NbreJours >= 5 && NbreJours <= 10)
         {
             Rabais = 0.05;
         }
         else
         {
-            if (NbreJours <= 10 && 30)
+            if (NbreJours >= 10 && NbreJours <= 30)
             {
                 Rabais = 0.01;
             }
@@ -89,11 +89,11 @@ function btnCalculer_onclick()
 
 
 
-    Montant= (((NbreJours*Tarif)+ ServiceToilettage )- Rabais);
+    Montant= (((NbreJours*(Tarif*TauxHoraires/24))+ ServiceToilettage )- Rabais);
     Taxes = (Montant*0.05) + (Montant*0.09975);
     Montant = (Montant + Taxes)-Rabais;
 
-    console.log(" Le montant sera de: " + Montant + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix + " " + ServiceToilettage2 );
+    document.getElementById("lblMessage").innerHTML = " Le montant sera de: " + Montant + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix + " " + ServiceToilettage2 ;
 
 }
 
@@ -104,6 +104,6 @@ function radChien_onclick()
 }
  function radChat_onclick()
  {
-  alert ("Bonjour");
+
   document.getElementById("imgChien-Chat").src = "img/chat.jpg";
  }
