@@ -1,13 +1,10 @@
-function btnCalculer_onclick()
+
+var ServiceToilettage, ServiceToilettage2 ,NbreJours, Tarif, Montant,Travail,  Veterinaires, Choix, Taxes, Rabais,NbreHeures, TauxHoraires;
+
+function saisirTauxHoraires()
 {
-    var  NbreJours, Tarif, Montant, ServiceToilettage, Veterinaires, Choix, ServiceToilettage2,Taxes, Rabais, TauxHoraires;
 
-
-    Choix = document.getElementById("radChien","radChat").value;
-    ServiceToilettage= parseFloat(document.getElementById("chkServ").value);
     Veterinaires = document.getElementById("lstVeterinaire").value;
-    NbreJours = parseFloat(document.getElementById("txtNbreJours").value);
-    TauxHoraires = parseFloat(document.getElementById("txtTauxHoraires").value);
 
 
     switch (Veterinaires)
@@ -33,77 +30,116 @@ function btnCalculer_onclick()
             break;
     }
 
-
-    if (NbreJours >= 1 && NbreJours <= 5)
-    {
-        Rabais = 0;
-    }
-    else
-    {
-        if (NbreJours >= 5 && NbreJours <= 10)
-        {
-            Rabais = 0.05;
-        }
-        else
-        {
-            if (NbreJours >= 10 && NbreJours <= 30)
-            {
-                Rabais = 0.01;
-            }
-            else
-            {
-                if (NbreJours >= 30)
-                {
-                    Rabais = 0.015;
-                }
-            }
-        }
-    }
-
-        if (document.getElementById("chkServ").checked== true)
-    {
-
-            ServiceToilettage = 5;
-            ServiceToilettage2 = "avec Service de Toilettage"
-        }
-
-    else
-    {
-        ServiceToilettage = 0;
-        ServiceToilettage2 = "Sans Service de Toilettage"
-    }
-
-
-    if (document.getElementById("radChien").checked== true)
-    {
-        Tarif = 18.50;
-
-        Choix = "Chien";
-
-    }
-    else {
-        Tarif = 16.95;
-        Veterinaires = "Maxime Simard";
-        Choix = "Chat";
-    }
-
-
-
-    Montant= (((NbreJours*(Tarif*TauxHoraires/24))+ ServiceToilettage )- Rabais);
-    Taxes = (Montant*0.05) + (Montant*0.09975);
-    Montant = (Montant + Taxes)-Rabais;
-
-    document.getElementById("lblMessage").innerHTML = " Le montant sera de: " + Montant + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix + " " + ServiceToilettage2 ;
-
 }
+
+ function SaisirNbreJours()
+
+ {
+
+
+
+     if (NbreJours >= 1 && NbreJours <= 5)
+     {
+         Rabais = 0;
+     }
+     else
+     {
+         if (NbreJours >= 5 && NbreJours <= 10)
+         {
+             Rabais = 0.05;
+         }
+         else
+         {
+             if (NbreJours >= 10 && NbreJours <= 30)
+             {
+                 Rabais = 0.01;
+             }
+             else
+             {
+                 if (NbreJours >= 30)
+                 {
+                     Rabais = 0.015;
+                 }
+             }
+         }
+     }
+
+ }
+
+ function CalculerMontant()
+ {
+     if (document.getElementById("radChien").checked== true)
+     {
+         Tarif = 18.50;
+
+         Choix = "Chien";
+
+     }
+     else {
+         Tarif = 16.95;
+         Choix = "Chat";
+     }
+
+     Travail = (NbreHeures*TauxHoraires); //montant Veterinaire
+     Rabais = (NbreJours*Tarif)*Rabais;
+     Montant =( (NbreJours*Tarif)-Rabais)  + ServiceToilettage;
+     Taxes = Montant + (Montant*0.05) + (Montant*0.09975) + Travail;
+    /* Montant = (((NbreJours*(Tarif*TauxHoraires))+ ServiceToilettage )- Rabais);
+     Taxes = (Montant*0.05) + (Montant*0.09975);
+     Montant = (Montant + Taxes)-Rabais;*/
+
+ }
+
+ function SercviceCheck()
+ {
+
+
+     if (document.getElementById("chkServ").checked== true)
+     {
+
+         ServiceToilettage = 5;
+         ServiceToilettage2 = "avec Service de Toilettage"
+     }
+
+     else
+     {
+         ServiceToilettage = 0;
+         ServiceToilettage2 = "Sans Service de Toilettage"
+     }
+ }
+
+
+ function SaisirVariables()
+ {
+     Choix = document.getElementById("radChien","radChat").value;
+     ServiceToilettage= parseFloat(document.getElementById("chkServ").value);
+     NbreJours = parseFloat(document.getElementById("txtNbreJours").value);
+     NbreHeures = parseFloat((document.getElementById("txtNbHeures")).value);
+ }
 
 function radChien_onclick()
 {
     alert("Bonjour");
     document.getElementById("imgChien-Chat").src ="img/chien.jpg";
 }
- function radChat_onclick()
- {
+function radChat_onclick()
+{
+    document.getElementById("imgChien-Chat").src = "img/chat.jpg";
+}
 
-  document.getElementById("imgChien-Chat").src = "img/chat.jpg";
- }
+
+function btnCalculer_onclick()
+{
+    SaisirVariables();
+    saisirTauxHoraires();
+    SaisirNbreJours();
+    SercviceCheck();
+    CalculerMontant();
+
+
+
+
+    document.getElementById("lblMessage").innerHTML = " Le montant sera de: " + Taxes + " et Votre Veterinaire sera " + Veterinaires + " pour la garde de votre " + Choix + " " + ServiceToilettage2 ;
+
+}
+
