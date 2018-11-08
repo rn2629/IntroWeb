@@ -84,9 +84,7 @@ function saisirTauxHoraires()
      Rabais = (NbreJours*Tarif)*Rabais;
      Montant =( (NbreJours*Tarif)-Rabais)  + ServiceToilettage;
      Taxes = Montant + (Montant*0.05) + (Montant*0.09975) + Travail;
-    /* Montant = (((NbreJours*(Tarif*TauxHoraires))+ ServiceToilettage )- Rabais);
-     Taxes = (Montant*0.05) + (Montant*0.09975);
-     Montant = (Montant + Taxes)-Rabais;*/
+
 
  }
 
