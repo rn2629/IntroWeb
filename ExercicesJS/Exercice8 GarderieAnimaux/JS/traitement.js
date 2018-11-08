@@ -1,5 +1,5 @@
 
-var ServiceToilettage, ServiceToilettage2 ,NbreJours, Tarif, Montant,Travail,  Veterinaires, Choix, Taxes, Rabais,NbreHeures, TauxHoraires;
+var ServiceToilettage, ServiceToilettage2 ,NbreJours, Tarif, Montant,Travail, Veterinaires, Choix, Taxes, Rabais,NbreHeures, TauxHoraires;
 
 function saisirTauxHoraires()
 {
@@ -88,7 +88,7 @@ function saisirTauxHoraires()
 
  }
 
- function SercviceCheck()
+ function SaisirService()
  {
 
 
@@ -131,7 +131,7 @@ function btnCalculer_onclick()
     SaisirVariables();
     saisirTauxHoraires();
     SaisirNbreJours();
-    SercviceCheck();
+    SaisirService();
     CalculerMontant();
 
 
