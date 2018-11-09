@@ -46,6 +46,12 @@ function btnTrouverMoy_onclick()
 function btnTrouverMeilleur_onclick()
 {
     var MeilleurPoint = TabPoints[0];
+    var NomJoueur;
+
+    if (NomJoueur<=0 && NomJoueur<=4)
+    {
+
+    }
 
     for (var i=0 ;i<TabPoints.length; i++)
     {
@@ -71,6 +77,11 @@ function btnTrouverPire_onclick()
     }
 
     document.getElementById("lblReponse").innerHTML = " Le meilleur Pointage est : " + PirePoint + " et le nom du Joueur est " + NomJoueur ;
+}
+
+function btnRechercher_onclick()
+{
+
 }
 
 
