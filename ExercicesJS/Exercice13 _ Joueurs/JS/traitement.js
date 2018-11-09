@@ -1,0 +1,48 @@
+
+var NomJoueur, TabPoints = new Array(4),TabJoueur = new Array(4),NbPoints, Cpt = 0;
+
+
+function btnAjouter_onclick()
+{
+    NomJoueur = document.getElementById("txtNom").value;
+    NbPoints = parseFloat(document.getElementById("txtPoints").value);
+    TabJoueur [Cpt]= NomJoueur;
+    TabPoints[Cpt]= NbPoints;
+    Cpt++;
+    document.getElementById("lblNbreJoueur").innerHTML = ("Nom Joueur" + Cpt);
+
+    if (Cpt > 3)
+    {
+        document.getElementById("btnTrouverPire").disabled = false;
+        document.getElementById("btnTrouverMoy").disabled = false;
+        document.getElementById("btnTrouverMeilleur").disabled = false;
+        document.getElementById("btnAjouter").disabled = true;
+    }
+
+
+   /* for (i=0 ; i<=3; i++)
+    {
+        TabNbPoints[i] = 0;
+    }
+
+*/
+
+}
+
+function btnTrouverMoy_onclick()
+{
+   var  Total = 0, Moyenne = 0;
+
+    for (var i =0; i<TabPoints.length ; i++)
+    {
+       Total += TabPoints[i] ;
+
+    }
+
+    Moyenne = Total/4;
+    document.getElementById("lblReponse").innerHTML = "La moyenne est de:" + Moyenne;
+}
+
+
+
+
