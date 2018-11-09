@@ -43,6 +43,35 @@ function btnTrouverMoy_onclick()
     document.getElementById("lblReponse").innerHTML = "La moyenne est de:" + Moyenne;
 }
 
+function btnTrouverMeilleur_onclick()
+{
+    var MeilleurPoint = TabPoints[0];
+
+    for (var i=0 ;i<TabPoints.length; i++)
+    {
+        if(MeilleurPoint<TabPoints[i])
+        {
+            MeilleurPoint = TabPoints[i];
+        }
+    }
+
+    document.getElementById("lblReponse").innerHTML = "Le meilleur Pointage est: " + MeilleurPoint + " et le nom du Joueur est " + NomJoueur ;
+}
+
+function btnTrouverPire_onclick()
+{
+    var PirePoint = TabPoints[0];
+
+    for (var i=0 ; i<TabPoints.length; i++)
+    {
+        if (PirePoint>TabPoints[i])
+        {
+            PirePoint = TabPoints[i];
+        }
+    }
+
+    document.getElementById("lblReponse").innerHTML = " Le meilleur Pointage est : " + PirePoint + " et le nom du Joueur est " + NomJoueur ;
+}
 
 
 
