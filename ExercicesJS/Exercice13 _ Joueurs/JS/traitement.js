@@ -41,13 +41,6 @@ function btnTrouverMeilleur_onclick()
     var MeilleurPoint = TabPoints[0];
     var NomMeilleurJoueur = TabJoueur[0];
 
-    for(var i=0 ; i<TabJoueur.length; i++)
-
-    {
-        if (NomMeilleurJoueur > TabJoueur[i])
-        {
-            NomMeilleurJoueur = TabJoueur[i];
-        }
 
     }
     for (var i=0 ;i<TabPoints.length; i++)
@@ -55,6 +48,7 @@ function btnTrouverMeilleur_onclick()
         if(MeilleurPoint<TabPoints[i])
         {
             MeilleurPoint = TabPoints[i];
+            NomMeilleurJoueur = TabJoueur[i];
         }
     }
 
@@ -63,23 +57,16 @@ function btnTrouverMeilleur_onclick()
 
 function btnTrouverPire_onclick()
 {
+
     var PirePoint = TabPoints[0];
     var NomPireJoueur = TabJoueur[0];
 
-    for(var i=0 ; i<TabJoueur.length; i++)
-
-{
-    if (NomPireJoueur == TabJoueur[i])
-    {
-        NomPireJoueur = TabJoueur[i];
-    }
-
-}
-    for (var i=0 ; i<TabPoints.length; i++)
+     for (var i=0 ; i<TabPoints.length; i++)
     {
         if (PirePoint>TabPoints[i])
         {
             PirePoint = TabPoints[i];
+            NomPireJoueur = TabJoueur[i];
         }
     }
 
