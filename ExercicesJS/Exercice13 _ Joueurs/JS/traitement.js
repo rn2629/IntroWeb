@@ -4,12 +4,13 @@ var NomJoueur, TabPoints = new Array(4),TabJoueur = new Array(4),NbPoints, Cpt =
 
 function btnAjouter_onclick()
 {
+
     NomJoueur = document.getElementById("txtNom").value;
     NbPoints = parseFloat(document.getElementById("txtPoints").value);
     TabJoueur [Cpt]= NomJoueur;
     TabPoints[Cpt]= NbPoints;
     Cpt++;
-    document.getElementById("lblNbreJoueur").innerHTML = ("Nom Joueur" + Cpt);
+    document.getElementById("lblNbreJoueur").innerHTML = ("Numero de Joueur" + Cpt);
 
     if (Cpt > 3)
     {
@@ -41,8 +42,6 @@ function btnTrouverMeilleur_onclick()
     var MeilleurPoint = TabPoints[0];
     var NomMeilleurJoueur = TabJoueur[0];
 
-
-    }
     for (var i=0 ;i<TabPoints.length; i++)
     {
         if(MeilleurPoint<TabPoints[i])
