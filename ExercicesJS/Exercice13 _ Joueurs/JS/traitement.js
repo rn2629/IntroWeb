@@ -20,13 +20,6 @@ function btnAjouter_onclick()
     }
 
 
-   /* for (i=0 ; i<=3; i++)
-    {
-        TabNbPoints[i] = 0;
-    }
-
-*/
-
 }
 
 function btnTrouverMoy_onclick()
@@ -46,13 +39,17 @@ function btnTrouverMoy_onclick()
 function btnTrouverMeilleur_onclick()
 {
     var MeilleurPoint = TabPoints[0];
-    var NomJoueur;
+    var NomMeilleurJoueur = TabJoueur[0];
 
-    if (NomJoueur<=0 && NomJoueur<=4)
+    for(var i=0 ; i<TabJoueur.length; i++)
+
     {
+        if (NomMeilleurJoueur > TabJoueur[i])
+        {
+            NomMeilleurJoueur = TabJoueur[i];
+        }
 
     }
-
     for (var i=0 ;i<TabPoints.length; i++)
     {
         if(MeilleurPoint<TabPoints[i])
@@ -61,13 +58,23 @@ function btnTrouverMeilleur_onclick()
         }
     }
 
-    document.getElementById("lblReponse").innerHTML = "Le meilleur Pointage est: " + MeilleurPoint + " et le nom du Joueur est " + NomJoueur ;
+    document.getElementById("lblReponse").innerHTML = "Le meilleur Pointage est: " + MeilleurPoint + " et le nom du Joueur est " + NomMeilleurJoueur ;
 }
 
 function btnTrouverPire_onclick()
 {
     var PirePoint = TabPoints[0];
+    var NomPireJoueur = TabJoueur[0];
 
+    for(var i=0 ; i<TabJoueur.length; i++)
+
+{
+    if (NomPireJoueur == TabJoueur[i])
+    {
+        NomPireJoueur = TabJoueur[i];
+    }
+
+}
     for (var i=0 ; i<TabPoints.length; i++)
     {
         if (PirePoint>TabPoints[i])
@@ -76,7 +83,7 @@ function btnTrouverPire_onclick()
         }
     }
 
-    document.getElementById("lblReponse").innerHTML = " Le meilleur Pointage est : " + PirePoint + " et le nom du Joueur est " + NomJoueur ;
+    document.getElementById("lblReponse").innerHTML = " Le pire Pointage est : " + PirePoint + " et le nom du Joueur est " + NomPireJoueur;
 }
 
 function btnRechercher_onclick()
