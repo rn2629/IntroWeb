@@ -18,6 +18,7 @@ function btnAjouter_onclick()
         document.getElementById("btnTrouverMoy").disabled = false;
         document.getElementById("btnTrouverMeilleur").disabled = false;
         document.getElementById("btnAjouter").disabled = true;
+        document.getElementById("btnRechercher").disabled = false;
     }
 
 
@@ -74,6 +75,26 @@ function btnTrouverPire_onclick()
 
 function btnRechercher_onclick()
 {
+    cpt  = 0;
+
+    var rechercher = TabJoueur[cpt];
+    var PointRecherche = TabPoints[cpt];
+
+  do {
+      cpt = -1;
+      cpt++;
+
+
+      if (rechercher == TabJoueur[cpt] && rechercher == TabJoueur[cpt] && rechercher == TabJoueur[cpt] && rechercher == TabJoueur[cpt])
+      {
+
+          document.getElementById("lblReponse").innerHTML = " Le nom du joueur que vous rechercher est : " + rechercher + " et le pointage est " + PointRecherche;
+      }
+
+  }while (rechercher != TabJoueur[cpt] && rechercher != TabJoueur[cpt] && rechercher != TabJoueur[cpt] && rechercher != TabJoueur[cpt]) ;
+
+
+
 
 }
 
