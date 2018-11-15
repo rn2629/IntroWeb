@@ -127,11 +127,11 @@ function Rechercher()
     }
     if (Trouve == true)
     {
-        Recherche =  document.getElementById("lblReponse").innerHTML = " Le pointage obtenue par : " + NomJoueur + " et le nom du Joueur est " + TabPoints[i];
+        Recherche =  document.getElementById("lblReponse").innerHTML = " Le nom du Joueur est : " + NomJoueur + " et le pointage obtenu est " + TabPoints[i];
     }
     else
     {
-        Recherche =  document.getElementById("lblReponse").innerHTML = "Erreur";
+        Recherche =  document.getElementById("lblReponse").innerHTML = "Entree Non Valide: Veuillez Ressayer";
     }
     return Recherche;
 }
