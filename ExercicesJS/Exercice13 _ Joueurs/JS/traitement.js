@@ -101,11 +101,39 @@ function PireP()
 
 function btnRechercher_onclick()
 {
+ res = Rechercher();
+}
+function Rechercher()
+{
+    var Recherche;
+    var Trouve;
+    var i;
+    var NomJoueur;
 
+    Trouve = false;
+    i = 0;
+    NomJoueur = document.getElementById("txtNom").value;
 
-    var rechercher = TabJoueur[cpt];
-    var PointRecherche = TabPoints[cpt];
-
+    while ((Trouve==false) && (i <= 3))
+    {
+        if(TabJoueur[i] == NomJoueur)
+        {
+            Trouve = true;
+        }
+        else
+        {
+            i++
+        }
+    }
+    if (Trouve == true)
+    {
+        Recherche =  document.getElementById("lblReponse").innerHTML = " Le pointage obtenue par : " + NomJoueur + " et le nom du Joueur est " + TabPoints[i];
+    }
+    else
+    {
+        Recherche =  document.getElementById("lblReponse").innerHTML = "Erreur";
+    }
+    return Recherche;
 }
 
 
