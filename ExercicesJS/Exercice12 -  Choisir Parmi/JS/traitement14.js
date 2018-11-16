@@ -22,7 +22,7 @@ function validChampOblig()
 {
     var valid = false;
 
-    if ((validExist("txtNbre1")=== true) && (validExist("txtNbre2")=== true))
+    if ((validExist("txtNbre1")=== true) && (validExist("txtNbre2")=== true) &&  (validExist("txtOperateur")=== true))
     {
         valid = true;
     }
