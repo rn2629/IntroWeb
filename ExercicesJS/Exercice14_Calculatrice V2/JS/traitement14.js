@@ -20,12 +20,15 @@ function traiterInfos()
 
 function validChampOblig()
 {
-    var valid = false;
+    var valid = true;
+    var tabChamp = new Array("txtNbre1","txtNbre2", "txtOperateur");
 
-    if ((validExist("txtNbre1")=== true) && (validExist("txtNbre2")=== true) &&  (validExist("txtOperateur")=== true))
+    for( var i = 0; i<tabChamp.length ; i++ )
+    if (validExist(tabChamp[i])=== false)
     {
-        valid = true;
+        valid = false;
     }
+
 
     return valid;
 }
