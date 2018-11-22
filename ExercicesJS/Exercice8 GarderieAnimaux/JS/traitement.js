@@ -125,7 +125,7 @@ function radChat_onclick()
     document.getElementById("imgChien-Chat").src = "img/chat.jpg";
 }
 
-function validChamp(ID)
+function validExist(ID)
 {
     var valid = true;
 
@@ -144,14 +144,18 @@ return valid;
 
 function validChampOblig()
 {
-    var valide = true;
+    var valid = true;
     var TabValeurs = new Array("txtNbreJours", "txtNomClient", "txtNumClient")
 
     for(var i=0 ; i<TabValeurs.length; i++)
     {
-        valide = false;
+        if(validExist(TabValeurs[i]) === false)
+        {
+            valid = false;
+        }
+
     }
-    return valide;
+    return valid;
 }
 
 
@@ -163,6 +167,7 @@ function btnCalculer_onclick()
     SaisirNbreJours();
     SaisirService();
     CalculerMontant();
+    valid = validChampOblig();
 
 
 
