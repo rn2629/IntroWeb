@@ -1,21 +1,27 @@
 function frmMembre_onsubmit()
 {
-    var Valid = false;
+    var Valid = true;
+    var Tarif;
+
 
         if(validChampOblig()=== true)
         {
+
             if(validFormat() === true)
             {
-                afficherTarif();
-                btnEnvoyer();
-                Valid = true;
+                Tarif = afficherTarif();
+                if(confirm(" Envoyer le Formulaire? Le montant est " + Tarif )=== false)
+                {
+                    Valid = false;
+                }
+
             }
         }
 
         else
         {
-
-            document.getElementById("lblErreurChampsObl").innerHTML = " Veuillez remplir les champs Obligatoires ";
+            document.getElementById("lblMessageErreur").innerHTML = " Veuillez remplir les champs Obligatoires ";
+            Valid = false;
         }
 
         return Valid;
@@ -39,12 +45,8 @@ function afficherTarif()
           Tarif = 80;
   }
 
-document.getElementById("Tarif").innerHTML = " Le Tarif pour " + type + "  est de " + Tarif + " $";
-
-
+  return Tarif;
 }
-
-
 
 
 function validExist(nomID)
@@ -61,20 +63,6 @@ function validExist(nomID)
     else
     {
         document.getElementById(nomID).style.borderColor = "";
-    }
-
-return Valid;
-
-}
-
-function btnEnvoyer()
-
-{
-    var Valid = false;
-    if(document.getElementById("btnEnvoyer").checked === false)
-    {
-        Valid = false;
-        alert (" Envoyer le formulaire? ");
     }
 
     return Valid;
