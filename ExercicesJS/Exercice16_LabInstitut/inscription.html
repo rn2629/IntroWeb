@@ -38,6 +38,7 @@
 			</nav>
 			<!--fin Nav-->
 			<h1>Entrez les informations du membre</h1>
+			<h1 id="lblNbreNom"> Numero de Nom 1</h1>
 			<!--boîte de texte-->
 			<form method="get" id="frmMembre" action="reponse.htm" onsubmit="return frmMembre_onsubmit()">
 			<label id="lblMessageErreur"></label>
@@ -48,14 +49,15 @@
 			<div><label>Code postal</label><input type="text" id="txtCodePostal" name="txtCodePostal" size="15" ></div>
 			<div><label for="tel">Téléphone<span>*</span></label><input id="tel" type="text"  name="tel" size="13" class="obligatoire" value=""></div>
 			<div><label>Code permanant</label><input type="text" id="txtCodePerm" name="txtCodePerm" size="12" ></div>
-			<div><label>Age</label><input type="text" id="txtAge" name="txtAge" size="2" ></div>
+			<div><label>Age<span>*</span></label><input type="text" id="txtAge" name="txtAge" size="3" class="obligatoire" value=""></div>
 			<label for="type">Catégorie</label><select id="type" name="type">
 				<option value="adulte" selected>adulte</option>
 				<option value="étudiant">étudiant</option>
-				<option value="retraité">retraité</option>
+				<option value="retraité">retrait -#	é</option>
 			</select>
 				<label id="Tarif"></label>
-				<div class="bouton2"><input class="bouton" value="Rechercher" id="btnRechercher" type= "button" onclick="btnRechercher_onclick()" /> <input class="bouton" value="Plus Jeune" id="btnPlusJeune" type= "button" onclick="btnPlusJeune_onclick()" /></div>
+				<div class="bouton2"><input class="bouton" value="Rechercher" id="btnRechercher" type= "button" onclick="btnRechercher_onclick()" /> <input class="bouton" value="Plus Jeune" id="btnPlusJeune" type= "button" disabled="true" onclick="btnPlusJeune_onclick()" /></div>
+				<p id="lblReponse">Reponse</p>
 					<div id="Boutons"><input class="bouton" value="Envoyer" id="btnEnvoyer" type= "submit" /> <input class="bouton" type="reset" value="Réintialiser"/></div>
 
 		</form>

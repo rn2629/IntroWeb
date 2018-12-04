@@ -76,7 +76,7 @@ function MeilleurP()
 
 function btnTrouverPire_onclick()
 {
-    PireP()
+    PireP();
 }
 
 function PireP()
