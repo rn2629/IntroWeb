@@ -225,7 +225,9 @@ function PlusJeune()
 
 function btnRechercheNomComplet_onclick()
 {
-    Recherche();
+
+    Recherche()
+
 }
 
 function Recherche()
@@ -252,7 +254,7 @@ function Recherche()
         {
             Recherche = document.getElementById("lblReponse").innerHTML = "Vous recherchez " + Nom + " et son age est de " + TabAge[i];
         }
-        else
+       else
         {
             Recherche = document.getElementById("lblReponse").innerHTML = " Erreur, Veuillez bien entrer le nom ";
         }
