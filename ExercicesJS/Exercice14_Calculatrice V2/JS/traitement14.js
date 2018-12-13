@@ -1,3 +1,4 @@
+
 function btnCalculer_onclick()
 {
     if (validChampOblig()=== true)

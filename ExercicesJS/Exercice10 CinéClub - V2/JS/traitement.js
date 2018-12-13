@@ -45,7 +45,8 @@ function saisirMiSession()
                 Representation = "Soir";
                 MiSession = 0.4;
             }
-            else if (Age > 16) {
+            else if (Age > 16)
+            {
                 Representation = "Soir";
                 MiSession = 0;
             }
